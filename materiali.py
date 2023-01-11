@@ -10,8 +10,7 @@ import ottimizzato
 pixel=ottimizzato.bestp
 fend=ottimizzato.bestf
 
-
-m1=spett.prob_mat1(39, 41, 93, 100000)
+m1=spett.prob_mat1(39, 41, 93, 10000)
 y=np.empty(0)
 
 for i in m1:
@@ -21,11 +20,12 @@ for i in m1:
 plt.hist(y, bins=200)
 plt.xlabel('massa(uma)')
 plt.ylabel('abbondanza')
-plt.tite('93% 39-K, 7% 41_k')
+plt.title('93% 39-K, 7% 41_k')
 plt.show()
 
-m2=spett.prob_mat2(191, 97, 194, 195, 196, 198, 74, 200, 464, 763, 936, 100000)
+m2=spett.prob_mat2(191, 97, 194, 195, 196, 198, 74, 200, 464, 736, 936, 10000)
 y=np.empty(0)
+
 
 for i in m2:
     a=spett.spe(pixel, fend, i)

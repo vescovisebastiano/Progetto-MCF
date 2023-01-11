@@ -83,8 +83,8 @@ def prob_mat1(m1, m2, p1, size):
     a=np.random.randint(1, 101, size)
     b=np.zeros(len(a))
 
-    mask1= a < p1
-    mask2= a >= p1
+    mask1= a <= p1
+    mask2= a > p1
 
     b[mask1]=m1
     b[mask2]=m2
@@ -96,12 +96,12 @@ def prob_mat2(m1, m2, m3, m4, m5, m6, p1, p2, p3, p4, p5, size):
     a=np.random.randint(1, 1001, size)
     b=np.zeros(len(a))
 
-    mask1= a < p1
-    mask2= (a >= p1) & (a < p2)
-    mask3= (a >= p2) & (a < p3)
-    mask4= (a >= p3) & (a < p4)
-    mask5= (a >= p4) & (a < p5)
-    mask6= a >= p5
+    mask1= a <= p1
+    mask2= (a > p1) & (a <= p2)
+    mask3= (a > p2) & (a <= p3)
+    mask4= (a > p3) & (a <= p4)
+    mask5= (a > p4) & (a <= p5)
+    mask6= (a > p5) 
 
     b[mask1]=m1
     b[mask2]=m2

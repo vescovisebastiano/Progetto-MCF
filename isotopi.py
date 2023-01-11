@@ -17,8 +17,7 @@ Po=np.random.randint(209, 211, 10000) #isotopo 2 (polonio 209 e 210)
 Ge=np.random.randint(36, 38, 10000)*2 #isotopo 3 (germanio 72 e 74)
 
 
-test=np.arange(0.001, 0.02, 0.001)
-test1=np.arange(0.0005, 0.02, 0.0005)
+test=np.arange(0.001, 0.021, 0.001)
 
 
 #carbonio
@@ -48,12 +47,12 @@ plt.ylabel("eff")
 plt.show()
 
 y=np.empty(0)
-for j in test1:
+for j in test:
     a=spett.eff1(j, j, C)
     y=np.append(y, a)
     
-plt.plot(test1, y)
-plt.plot(test1, y, 'o')
+plt.plot(test, y)
+plt.plot(test, y, 'o')
 plt.title("carbonio, vario simultaneamente pixel e fenditura")
 plt.xlabel("L")
 plt.ylabel("eff")
@@ -69,7 +68,7 @@ for j in test:
 
 plt.plot(test, y)
 plt.plot(test, y, 'o')
-plt.title("carbonio, mantengo pixel costante")
+plt.title("polonio, mantengo pixel costante")
 plt.xlabel("L")
 plt.ylabel("eff")
 plt.show()
@@ -81,19 +80,19 @@ for j in test:
 
 plt.plot(test, y)
 plt.plot(test, y, 'o')
-plt.title("carbonio, mantengo fenditura costante")
+plt.title("polonio, mantengo fenditura costante")
 plt.xlabel("L")
 plt.ylabel("eff")
 plt.show()
 
 y=np.empty(0)
-for j in test1:
+for j in test:
     a=spett.eff1(j, j, Po)
     y=np.append(y, a)
     
-plt.plot(test1, y)
-plt.plot(test1, y, 'o')
-plt.title("carbonio, vario simultaneamente pixel e fenditura")
+plt.plot(test, y)
+plt.plot(test, y, 'o')
+plt.title("polonio, vario simultaneamente pixel e fenditura")
 plt.xlabel("L")
 plt.ylabel("eff")
 plt.show()
@@ -125,12 +124,12 @@ plt.ylabel("eff")
 plt.show()
 
 y=np.empty(0)
-for j in test1:
+for j in test:
     a=spett.eff1(j, j, Ge)
     y=np.append(y, a)
     
-plt.plot(test1, y)
-plt.plot(test1, y, 'o')
+plt.plot(test, y)
+plt.plot(test, y, 'o')
 plt.title("germanio, vario simultaneamente pixel e fenditura")
 plt.xlabel("L")
 plt.ylabel("eff")
